@@ -1,0 +1,27 @@
+{
+  "name": "xszs-app",
+  "version": "1.0.0",
+  "description": "Novel Creator - AI 小说创作助手 XSZS.APP",
+  "private": true,
+  "engines": {
+    "node": ">=18 <23",
+    "pnpm": ">=9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "electron",
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "dev": "pnpm --filter 1-novel-shell dev",
+    "build": "pnpm --filter 1-novel-shell build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^5.4.2"
+  }
+}
